@@ -527,6 +527,100 @@
       transition: var(--transition);
     }
 
+    .visual-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .visual-card {
+      background: #f8fafc;
+      border: 1px solid var(--light-gray);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .visual-card h5 {
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      font-size: 0.98rem;
+    }
+
+    .bar-chart {
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 0.75rem;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 130px 1fr 56px;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .bar-label {
+      font-size: 0.92rem;
+      color: var(--dark);
+    }
+
+    .bar-track {
+      width: 100%;
+      height: 12px;
+      border-radius: 999px;
+      background: var(--light-gray);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--secondary), var(--accent));
+    }
+
+    .bar-value {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      color: var(--primary);
+      text-align: right;
+    }
+
+    .compare-boxes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .compare-box {
+      border: 1px solid var(--light-gray);
+      background: white;
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .compare-box span {
+      display: block;
+      color: var(--gray);
+      font-size: 0.84rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .compare-box strong {
+      display: block;
+      color: var(--primary);
+      font-size: 1.5rem;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .mini-note {
+      font-size: 0.88rem;
+      color: var(--gray);
+      margin-top: 0.75rem;
+    }
+
     .cta-section {
       background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
       color: white;
@@ -771,101 +865,124 @@
   </section>
 
   <section id="experience" style="background-color:#f8fafc;">
-    <div class="container">
-      <div class="section-header">
-        <h2>Professional Experience</h2>
-      </div>
-      <div class="experience-container">
-        <div class="experience-card">
-          <div class="experience-header">
-            <h3>TikTok – Austin, TX</h3>
-            <span class="date">January 2024 – Present</span>
-          </div>
-          <div class="experience-content">
-            <h4>Quality Assurance Specialist (E-Commerce &amp; LLM Programs)</h4>
-            <p class="experience-summary">Worked inside QA and moderation systems where model output quality, human review, and policy interpretation had to align in real time. The role centered on identifying breakdown points that were invisible in top-line metrics but obvious in queue behavior and reversals.</p>
-            <ul>
-              <li>Redesigned TikTok Shop’s QA workflow, improving checkpoint clarity and escalation paths for 9% faster queue turnaround and fewer late-stage policy reversals</li>
-              <li>Partnered with AI engineers to support LLM QA testing frameworks that improved model-policy alignment accuracy by 12%</li>
-              <li>Delivered training and documentation to 200+ sellers, contributing to a 25% reduction in violation rates within one quarter</li>
-              <li>Maintained 99% QA pass rate during policy changes through just-in-time training and quality calibration</li>
-              <li>Observed recurring disagreement patterns in borderline content and model edge cases, especially where policy intent required interpretation</li>
-              <li>Worked with Governance and Product Engineering teams on seller verification and EU Digital Services Act compliance alignment</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="experience-card">
-          <div class="experience-header">
-            <h3>Accenture – Austin, TX</h3>
-            <span class="date">December 2022 – November 2023</span>
-          </div>
-          <div class="experience-content">
-            <h4>Trust &amp; Safety Team Manager (Meta Project)</h4>
-            <p class="experience-summary">Led high-risk moderation operations where the challenge was not simply throughput, but keeping speed, quality, and policy consistency aligned under pressure.</p>
-            <ul>
-              <li>Led a team of 15–20 reviewers across child safety, extremism, and terrorism queues, resolving 8K tickets daily while maintaining SLA compliance</li>
-              <li>Built decision trees for ambiguous policy cases, reducing manager escalations by 18% and increasing first-pass accuracy to 99%</li>
-              <li>Scaled an Arabic-language anti-terrorism project from 6 to 40 reviewers, contributing to contract renewal from Meta</li>
-              <li>Developed training, peer-audit loops, and knowledge workflows that reduced queue error rates by 40% and cut handle time by 20%</li>
-              <li>Cleared over 20K sensitive reports with only 2% escalated, preserving platform trust and operational bandwidth</li>
-              <li>Observed that most quality failures were concentrated in recurring gray-area scenarios rather than being randomly distributed</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="experience-card">
-          <div class="experience-header">
-            <h3>Accenture – Austin, TX</h3>
-            <span class="date">August 2021 – December 2022</span>
-          </div>
-          <div class="experience-content">
-            <h4>Senior Subject Matter Expert (Meta Project)</h4>
-            <p class="experience-summary">Acted as the bridge between frontline moderators, QA, and leadership, especially in complex policy scenarios that needed structure rather than escalation volume.</p>
-            <ul>
-              <li>Managed a team of 7 SMEs supporting complex moderation and technical issue resolution</li>
-              <li>Created modular knowledge bases for 100+ moderators, reducing average handle time by 20% while maintaining 99% QA scores</li>
-              <li>Trained moderators on risk-based enforcement and gray-area resolution strategies to reduce escalation dependency</li>
-              <li>Introduced regression coaching methods that revived underperforming agents’ metrics through phased improvement plans</li>
-              <li>Advised leadership on ticket categorization challenges and sensitivity triggers that were repeatedly causing inconsistency</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="experience-card">
-          <div class="experience-header">
-            <h3>Vaco by Highspring – Austin, TX</h3>
-            <span class="date">2024 – 2026</span>
-          </div>
-          <div class="experience-content">
-            <h4>Intel Detection Analyst</h4>
-            <p class="experience-summary">Worked in high-noise monitoring environments where the core challenge was not seeing more information, but identifying which signals actually mattered and when they required escalation.</p>
-            <ul>
-              <li>Monitored global sources to identify misinformation trends, user risks, crisis events, and geopolitical threats</li>
-              <li>Applied OSINT techniques to detect election integrity risks, disinformation patterns, and early misuse signals</li>
-              <li>Delivered timely situational awareness to support operational readiness and stakeholder action</li>
-              <li>Observed that signal prioritization, not raw data volume, was the main determinant of response quality</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="experience-card">
-          <div class="experience-header">
-            <h3>Marriott – Austin, TX</h3>
-            <span class="date">February 2014 – August 2019</span>
-          </div>
-          <div class="experience-content">
-            <h4>Technical Support &amp; Loss Prevention</h4>
-            <ul>
-              <li>Delivered technical support for 15+ internal users, reducing operational disruption through rapid issue resolution</li>
-              <li>Supported internal security procedures and loss prevention operations across guest service points</li>
-              <li>Introduced a reporting system that tracked device performance and flagged recurring faults</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+  <div class="container">
+    <div class="section-header">
+      <h2>Professional Experience</h2>
     </div>
-  </section>
+    <div class="experience-container">
+
+      <div class="experience-card">
+        <div class="experience-header">
+          <h3>TikTok – Austin, TX</h3>
+          <span class="date">2024 – Present</span>
+        </div>
+        <div class="experience-content">
+          <h4>Quality Assurance Specialist (E-Commerce & LLM Programs)</h4>
+          <p class="experience-summary">Operate at the intersection of AI moderation, QA systems, and policy enforcement in a high-volume environment. Focused on identifying where model outputs, human decisions, and policy expectations diverge—and turning those gaps into measurable improvements.</p>
+          <ul>
+            <li>Redesigned QA workflows and escalation paths, improving operational efficiency by 9% and reducing late-stage reversals</li>
+            <li>Partnered with AI and product teams on LLM QA testing, improving model-policy alignment accuracy by 12%</li>
+            <li>Delivered structured training and policy guidance to 200+ sellers, contributing to a 25% reduction in violation rates</li>
+            <li>Maintained 99% QA pass rate during rapid policy updates and enforcement changes</li>
+            <li>Identified recurring failure patterns in borderline content categories (e.g., contextual harassment, intent ambiguity)</li>
+            <li>Collaborated with Governance and Compliance teams on EU Digital Services Act (DSA) readiness and enforcement alignment</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-card">
+        <div class="experience-header">
+          <h3>Accenture (Meta) – Austin, TX</h3>
+          <span class="date">2022 – 2023</span>
+        </div>
+        <div class="experience-content">
+          <h4>Trust & Safety Team Manager</h4>
+          <p class="experience-summary">Led high-risk moderation operations supporting Meta platforms, balancing speed, accuracy, and policy consistency across sensitive content categories.</p>
+          <ul>
+            <li>Managed a team of 15–20 moderators across child safety, extremism, and high-risk queues handling 8K+ daily tickets</li>
+            <li>Designed decision trees and escalation frameworks that reduced escalation volume by 18% and improved first-pass accuracy to 99%</li>
+            <li>Scaled Arabic-language anti-terrorism moderation operations from 6 to 40 reviewers, contributing to contract renewal</li>
+            <li>Implemented QA calibration, coaching loops, and knowledge systems reducing error rates by 40% and handle time by 20%</li>
+            <li>Handled 20K+ high-risk reports with less than 2% escalation, maintaining platform safety and compliance standards</li>
+            <li>Identified systemic inconsistency patterns driven by policy ambiguity rather than reviewer performance</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-card">
+        <div class="experience-header">
+          <h3>Accenture (Meta) – Austin, TX</h3>
+          <span class="date">2021 – 2022</span>
+        </div>
+        <div class="experience-content">
+          <h4>Senior Subject Matter Expert</h4>
+          <p class="experience-summary">Served as escalation point and systems thinker across moderation operations, bridging frontline reviewers, QA, and leadership on complex policy decisions.</p>
+          <ul>
+            <li>Led a team of 7 SMEs supporting complex moderation cases and technical issue resolution</li>
+            <li>Developed knowledge bases and decision frameworks used by 100+ moderators, reducing handle time by 20%</li>
+            <li>Trained teams on gray-area enforcement and risk-based decision-making to reduce escalation dependency</li>
+            <li>Implemented performance recovery frameworks for underperforming agents, improving QA scores and retention</li>
+            <li>Provided leadership insight on recurring edge-case failures and content sensitivity triggers</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-card">
+        <div class="experience-header">
+          <h3>Accenture (Meta) – Austin, TX</h3>
+          <span class="date">2021</span>
+        </div>
+        <div class="experience-content">
+          <h4>Platform Quality Assurance Specialist</h4>
+          <p class="experience-summary">Focused on reviewer accuracy, evaluation consistency, and policy calibration in a fast-moving moderation environment where quality drift could quickly affect enforcement outcomes.</p>
+          <ul>
+            <li>Assessed QA error trends with leads to refine evaluation criteria through data-backed calibration</li>
+            <li>Designed manuals, ticketing playbooks, and compliance scoring rubrics to improve review consistency</li>
+            <li>Organized training sessions for 40+ moderators to strengthen structured policy application</li>
+            <li>Supported internal QA audits, onboarding walkthroughs, and biweekly business review documentation</li>
+            <li>Observed that unclear review standards created repeated quality variance across agents and edge-case queues</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-card">
+        <div class="experience-header">
+          <h3>Accenture (Meta) – Austin, TX</h3>
+          <span class="date">2019 – 2021</span>
+        </div>
+        <div class="experience-content">
+          <h4>Content Moderator Analyst</h4>
+          <p class="experience-summary">Worked directly in frontline review queues, where repeated exposure to abuse patterns, reviewer variation, and edge-case content built the foundation for later QA and systems-focused work.</p>
+          <ul>
+            <li>Reviewed high-risk content queues while maintaining 100% SLA compliance across enforcement categories</li>
+            <li>Identified emerging abuse patterns and recurring review challenges that informed policy refinement and coaching</li>
+            <li>Tracked reviewer performance data to surface regression risks and coaching needs</li>
+            <li>Shortened ramp-up time for new moderators through training, feedback, and calibration support</li>
+            <li>Built early experience in how policy ambiguity creates inconsistency in real moderation environments</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-card">
+        <div class="experience-header">
+          <h3>Vaco by Highspring – Austin, TX</h3>
+          <span class="date">2024 – Present</span>
+        </div>
+        <div class="experience-content">
+          <h4>Intel Detection Analyst</h4>
+          <p class="experience-summary">Focused on identifying high-risk signals across large-scale data streams using OSINT methodologies, emphasizing signal prioritization over volume.</p>
+          <ul>
+            <li>Monitored global intelligence sources to identify misinformation, geopolitical risk, and crisis signals</li>
+            <li>Applied OSINT frameworks to detect election interference and coordinated disinformation campaigns</li>
+            <li>Delivered actionable intelligence summaries to support rapid decision-making</li>
+            <li>Analyzed signal patterns to differentiate noise from early-stage risk indicators</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <section id="case-studies">
     <div class="container">
@@ -912,64 +1029,47 @@
             </ul>
             <h4>What This Shows</h4>
             <p>Overall accuracy is not enough. Systems need category-level evaluation and error segmentation to identify the scenarios that actually drive moderation risk.</p>
-          </div>
 
-          <div id="misinfo" class="scenario-panel">
-            <h4>Observed Scenario</h4>
-            <p>Early-stage misinformation rarely arrives as a clear violation. It often appears fragmented, low-confidence, and individually weak, which means systems delay action until patterns are already spreading.</p>
-            <div class="metrics-grid">
-              <div class="metric-box">
-                <span class="label">Primary detection issue</span>
-                <span class="value">Timing</span>
+            <div class="visual-grid">
+              <div class="visual-card">
+                <h5>Illustrative Disagreement Pattern</h5>
+                <div class="bar-chart">
+                  <div class="bar-row">
+                    <div class="bar-label">Clear violations</div>
+                    <div class="bar-track"><div class="bar-fill" style="width: 6%"></div></div>
+                    <div class="bar-value">6%</div>
+                  </div>
+                  <div class="bar-row">
+                    <div class="bar-label">Borderline harassment</div>
+                    <div class="bar-track"><div class="bar-fill" style="width: 28%"></div></div>
+                    <div class="bar-value">28%</div>
+                  </div>
+                  <div class="bar-row">
+                    <div class="bar-label">Context-heavy speech</div>
+                    <div class="bar-track"><div class="bar-fill" style="width: 24%"></div></div>
+                    <div class="bar-value">24%</div>
+                  </div>
+                </div>
+                <p class="mini-note">Illustrative ranges based on the kind of edge-case disagreement patterns described in the case study, not a formal published dataset.</p>
               </div>
-              <div class="metric-box">
-                <span class="label">Signal quality</span>
-                <span class="value">Weak early</span>
-              </div>
-              <div class="metric-box">
-                <span class="label">Failure mode</span>
-                <span class="value">Delay</span>
+
+              <div class="visual-card">
+                <h5>Operational Consequence Split</h5>
+                <div class="compare-boxes">
+                  <div class="compare-box">
+                    <span>False positive effect</span>
+                    <strong>Higher</strong>
+                    <p>Appeals, reversals, reviewer friction</p>
+                  </div>
+                  <div class="compare-box">
+                    <span>False negative effect</span>
+                    <strong>Higher</strong>
+                    <p>Safety exposure, delayed enforcement</p>
+                  </div>
+                </div>
+                <p class="mini-note">The point is not which side is universally worse. The point is that each error direction creates a different operational cost.</p>
               </div>
             </div>
-            <h4>Why It Breaks</h4>
-            <p>Moderation systems often wait for certainty. But in integrity environments, waiting for certainty can mean waiting until the harm is already distributed across multiple surfaces.</p>
-            <h4>Operational Impact</h4>
-            <ul>
-              <li>Late intervention in developing narratives</li>
-              <li>More volume to review once spread accelerates</li>
-              <li>Greater coordination burden across response teams</li>
-            </ul>
-            <h4>What This Shows</h4>
-            <p>The failure is not always detection itself. Often it is the inability to treat early weak indicators as meaningful enough to warrant closer monitoring.</p>
-          </div>
-
-          <div id="fraud" class="scenario-panel">
-            <h4>Observed Scenario</h4>
-            <p>Individual risk signals may look low-confidence on their own, but when grouped across accounts or behaviors they form recognizable fraud patterns. Systems that review signals independently miss this relationship.</p>
-            <div class="metrics-grid">
-              <div class="metric-box">
-                <span class="label">Primary failure type</span>
-                <span class="value">Aggregation</span>
-              </div>
-              <div class="metric-box">
-                <span class="label">Signal visibility</span>
-                <span class="value">Present</span>
-              </div>
-              <div class="metric-box">
-                <span class="label">Decision gap</span>
-                <span class="value">Context</span>
-              </div>
-            </div>
-            <h4>Why It Breaks</h4>
-            <p>Signals are visible, but they are evaluated too narrowly. Without contextual grouping, suspicious behavior remains below threshold until the pattern becomes obvious too late.</p>
-            <h4>Operational Impact</h4>
-            <ul>
-              <li>Longer fraud persistence windows</li>
-              <li>Delayed escalation for connected accounts</li>
-              <li>Higher investigative workload later in the cycle</li>
-            </ul>
-            <h4>What This Shows</h4>
-            <p>The issue is not always lack of data. Often it is lack of pattern aggregation and prioritization logic.</p>
           </div>
         </div>
 
@@ -1021,53 +1121,210 @@
         </div>
       </div>
     </div>
-  </section>
+    </section>
 
-  <section id="certifications">
+  <!-- ADDITIONAL CASE STUDIES -->
+  <section id="additional-cases" style="background-color:#f8fafc;">
     <div class="container">
       <div class="section-header">
-        <h2>Certifications &amp; Education</h2>
+        <h2>Additional Case Studies</h2>
       </div>
-      <div class="certifications-container">
-        <div class="certification-card">
-          <h3>Associate of Applied Science (AAS) in Cybersecurity</h3>
-          <p class="issuer">Austin Community College</p>
+
+      <div class="case-grid">
+
+        <!-- LLM QA CASE -->
+        <div class="case-card">
+          <h3>LLM QA & Policy Alignment</h3>
+          <p>This case reflects patterns observed while supporting LLM QA and moderation workflows where model output, human QA, and policy intent must align under production constraints.</p>
+
+          <h4>Observed Scenario</h4>
+          <p>Model outputs were often technically correct but misaligned with enforcement expectations, especially when policy required contextual interpretation rather than literal classification.</p>
+
+          <div class="metrics-grid">
+            <div class="metric-box">
+              <span class="label">Primary issue</span>
+              <span class="value">Alignment</span>
+            </div>
+            <div class="metric-box">
+              <span class="label">QA correction pattern</span>
+              <span class="value">Late-stage</span>
+            </div>
+            <div class="metric-box">
+              <span class="label">Failure type</span>
+              <span class="value">Interpretation gap</span>
+            </div>
+          </div>
+
+          <h4>Why It Breaks</h4>
+          <p>Policies are written for human interpretation, while models optimize for pattern recognition. This mismatch creates systematic drift in edge cases.</p>
+
+          <div class="visual-grid">
+            <div class="visual-card">
+              <h5>QA Correction Timing</h5>
+              <div class="bar-chart">
+                <div class="bar-row">
+                  <div class="bar-label">Early-stage detection</div>
+                  <div class="bar-track"><div class="bar-fill" style="width: 35%"></div></div>
+                  <div class="bar-value">35%</div>
+                </div>
+                <div class="bar-row">
+                  <div class="bar-label">Late-stage correction</div>
+                  <div class="bar-track"><div class="bar-fill" style="width: 65%"></div></div>
+                  <div class="bar-value">65%</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="visual-card">
+              <h5>Operational Effect</h5>
+              <div class="compare-boxes">
+                <div class="compare-box">
+                  <span>Throughput impact</span>
+                  <strong>Lower</strong>
+                  <p>Rework slows output</p>
+                </div>
+                <div class="compare-box">
+                  <span>Consistency</span>
+                  <strong>Lower</strong>
+                  <p>QA variability increases</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4>Key Takeaway</h4>
+          <p>QA is not just validation—it is a control system that directly shapes model behavior and output quality.</p>
         </div>
-        <div class="certification-card">
-          <h3>Certified ScrumMaster (CSM)</h3>
-          <p class="issuer">Scrum Alliance</p>
+
+        <!-- OSINT / RISK CASE -->
+        <div class="case-card">
+          <h3>Risk Intelligence & OSINT Signal Detection</h3>
+          <p>Based on intelligence monitoring work where identifying meaningful signals within large volumes of data was critical to operational response.</p>
+
+          <h4>Observed Scenario</h4>
+          <p>High volumes of incoming data contained mostly low-value noise, while meaningful signals appeared weak and fragmented in early stages.</p>
+
+          <div class="metrics-grid">
+            <div class="metric-box">
+              <span class="label">Signal-to-noise ratio</span>
+              <span class="value">Low</span>
+            </div>
+            <div class="metric-box">
+              <span class="label">Detection issue</span>
+              <span class="value">Prioritization</span>
+            </div>
+            <div class="metric-box">
+              <span class="label">Failure mode</span>
+              <span class="value">Delay</span>
+            </div>
+          </div>
+
+          <h4>Why It Breaks</h4>
+          <p>Systems often prioritize volume or confidence thresholds instead of recognizing weak but meaningful early signals.</p>
+
+          <div class="visual-grid">
+            <div class="visual-card">
+              <h5>Signal Distribution</h5>
+              <div class="bar-chart">
+                <div class="bar-row">
+                  <div class="bar-label">Noise</div>
+                  <div class="bar-track"><div class="bar-fill" style="width: 85%"></div></div>
+                  <div class="bar-value">85%</div>
+                </div>
+                <div class="bar-row">
+                  <div class="bar-label">Actionable signals</div>
+                  <div class="bar-track"><div class="bar-fill" style="width: 15%"></div></div>
+                  <div class="bar-value">15%</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="visual-card">
+              <h5>Impact Comparison</h5>
+              <div class="compare-boxes">
+                <div class="compare-box">
+                  <span>Early detection</span>
+                  <strong>Higher</strong>
+                  <p>Requires pattern recognition</p>
+                </div>
+                <div class="compare-box">
+                  <span>Delayed detection</span>
+                  <strong>Higher</strong>
+                  <p>Increases response cost</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4>Key Takeaway</h4>
+          <p>In intelligence environments, value comes from filtering and prioritization—not data volume.</p>
         </div>
-        <div class="certification-card">
-          <h3>ITIL® 4 Foundation Certificate</h3>
-          <p class="issuer">PeopleCert</p>
-        </div>
-        <div class="certification-card">
-          <h3>Lean Six Sigma Yellow Belt</h3>
-          <p class="issuer">Council for Six Sigma Certification</p>
-        </div>
-        <div class="certification-card">
-          <h3>Lean Six Sigma White Belt</h3>
-          <p class="issuer">Council for Six Sigma Certification</p>
-        </div>
-        <div class="certification-card">
-          <h3>Google IT Support Professional Certificate</h3>
-          <p class="issuer">Google / Coursera</p>
-        </div>
-        <div class="certification-card">
-          <h3>AWS Certified Cloud Practitioner</h3>
-          <p class="issuer">Amazon Web Services</p>
-        </div>
-        <div class="certification-card">
-          <h3>Google Data Analytics Professional Certificate</h3>
-          <p class="issuer">Google / Coursera</p>
-        </div>
-        <div class="certification-card">
-          <h3>Customer Success Manager Level 1 (CCSM)</h3>
-          <p class="issuer">SuccessCOACHING</p>
-        </div>
+
       </div>
     </div>
   </section>
+
+  <section id="certifications">
+  <div class="container">
+    <div class="section-header">
+      <h2>Certifications & Education</h2>
+    </div>
+    <div class="certifications-container">
+      <div class="certification-card">
+        <h3>Associate of Applied Science (AAS) in Cybersecurity</h3>
+        <p class="issuer">Austin Community College</p>
+      </div>
+      <div class="certification-card">
+        <h3>Certified ScrumMaster (CSM)</h3>
+        <p class="issuer">Scrum Alliance</p>
+      </div>
+      <div class="certification-card">
+        <h3>ITIL® 4 Foundation</h3>
+        <p class="issuer">PeopleCert</p>
+      </div>
+      <div class="certification-card">
+        <h3>Google Data Analytics Professional Certificate</h3>
+        <p class="issuer">Google / Coursera</p>
+      </div>
+      <div class="certification-card">
+        <h3>AWS Certified Cloud Practitioner</h3>
+        <p class="issuer">Amazon Web Services</p>
+      </div>
+      <div class="certification-card">
+        <h3>Lean Six Sigma Yellow Belt</h3>
+        <p class="issuer">CSSC</p>
+      </div>
+      <div class="certification-card">
+        <h3>Lean Six Sigma White Belt</h3>
+        <p class="issuer">CSSC</p>
+      </div>
+      <div class="certification-card">
+        <h3>Google IT Support Professional Certificate</h3>
+        <p class="issuer">Google / Coursera</p>
+      </div>
+      <div class="certification-card">
+        <h3>Customer Success Manager (CCSM Level 1)</h3>
+        <p class="issuer">SuccessCOACHING</p>
+      </div>
+      <div class="certification-card">
+        <h3>Project Management</h3>
+        <p class="issuer">University of California, Irvine / Coursera</p>
+      </div>
+      <div class="certification-card">
+        <h3>Generative AI for Everyone</h3>
+        <p class="issuer">DeepLearning.AI</p>
+      </div>
+      <div class="certification-card">
+        <h3>AI Fundamentals</h3>
+        <p class="issuer">Professional Development</p>
+      </div>
+      <div class="certification-card">
+        <h3>AI Security</h3>
+        <p class="issuer">Securiti</p>
+      </div>
+    </div>
+  </div>
+</section>
 
   <section id="accomplishments" style="background-color:#f8fafc;">
     <div class="container">
