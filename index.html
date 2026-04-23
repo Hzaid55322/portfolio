@@ -1,864 +1,1192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hayder Zaidi | Trust & Safety Leader</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #1a365d;
-            --secondary: #2c5282;
-            --accent: #4299e1;
-            --light: #f7fafc;
-            --dark: #1a202c;
-            --gray: #718096;
-            --light-gray: #e2e8f0;
-            --success: #48bb78;
-            --transition: all 0.3s ease;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Open Sans', sans-serif;
-            color: var(--dark);
-            background-color: var(--light);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4, h5 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header Styles */
-        header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 3rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .header-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid rgba(255,255,255,0.2);
-            background: var(--secondary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
-            margin-bottom: 1.5rem;
-        }
-        
-        .header-text h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .header-text h2 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-            color: rgba(255,255,255,0.9);
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-        }
-        
-        .contact-item i {
-            margin-right: 10px;
-            font-size: 1.2rem;
-            color: var(--accent);
-        }
-        
-        .contact-item a {
-            color: white;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        .contact-item a:hover {
-            color: var(--accent);
-        }
-        
-        /* Navigation */
-        nav {
-            background: white;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: center;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            flex-wrap: wrap;
-        }
-        
-        .nav-links li {
-            padding: 1rem 1.5rem;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            position: relative;
-            transition: var(--transition);
-        }
-        
-        .nav-links a::after {
-            content: "";
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: var(--accent);
-            transition: var(--transition);
-        }
-        
-        .nav-links a:hover {
-            color: var(--secondary);
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
-        /* Section Styles */
-        section {
-            padding: 4rem 0;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .section-header h2 {
-            font-size: 2.2rem;
-            color: var(--primary);
-            position: relative;
-            display: inline-block;
-            padding-bottom: 1rem;
-        }
-        
-        .section-header h2::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--accent);
-            border-radius: 2px;
-        }
-        
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        .about-text p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-        
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .skill-category {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .skill-category h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-        
-        .skill-list {
-            list-style: none;
-        }
-        
-        .skill-list li {
-            margin-bottom: 0.5rem;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-        
-        .skill-list li::before {
-            content: "•";
-            color: var(--accent);
-            position: absolute;
-            left: 0;
-            font-size: 1.2rem;
-        }
-        
-        /* Experience Section */
-        .experience-container {
-            display: grid;
-            gap: 2rem;
-        }
-        
-        .experience-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: var(--transition);
-        }
-        
-        .experience-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-        }
-        
-        .experience-header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 1.5rem;
-        }
-        
-        .experience-header h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.3rem;
-        }
-        
-        .experience-header .date {
-            font-weight: 300;
-            opacity: 0.9;
-        }
-        
-        .experience-content {
-            padding: 1.5rem;
-        }
-        
-        .experience-content h4 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        
-        .experience-content ul {
-            padding-left: 1.5rem;
-        }
-        
-        .experience-content ul li {
-            margin-bottom: 0.8rem;
-        }
-        
-        /* Certifications Section */
-        .certifications-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .certification-card {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: var(--transition);
-        }
-        
-        .certification-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        
-        .certification-card h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .certification-card .issuer {
-            color: var(--gray);
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Accomplishments Section */
-        .accomplishments-container {
-            display: grid;
-            gap: 2rem;
-        }
-        
-        .accomplishment-card {
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            position: relative;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-        
-        .accomplishment-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .accomplishment-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background: var(--accent);
-        }
-        
-        .accomplishment-card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            text-align: center;
-            padding: 4rem 0;
-        }
-        
-        .cta-content {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .cta-content h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .cta-content p {
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: white;
-            color: var(--primary);
-            border: none;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            text-decoration: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            background: var(--light);
-        }
-        
-        .btn-outline {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-            margin-left: 1rem;
-        }
-        
-        .btn-outline:hover {
-            background: rgba(255,255,255,0.1);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-        
-        .footer-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            color: white;
-            font-size: 1.5rem;
-            transition: var(--transition);
-        }
-        
-        .social-links a:hover {
-            background: var(--accent);
-            transform: translateY(-5px);
-        }
-        
-        .copyright {
-            color: rgba(255,255,255,0.7);
-            font-size: 0.9rem;
-            margin-top: 1.5rem;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .nav-links li {
-                padding: 0.8rem 1rem;
-            }
-            
-            .section-header h2 {
-                font-size: 1.8rem;
-            }
-            
-            .btn {
-                display: block;
-                width: 100%;
-                margin-bottom: 1rem;
-            }
-            
-            .btn-outline {
-                margin-left: 0;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hayder Zaidi | AI Risk, Trust & Safety, and Moderation Quality</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #1a365d;
+      --secondary: #2c5282;
+      --accent: #4299e1;
+      --light: #f7fafc;
+      --dark: #1a202c;
+      --gray: #718096;
+      --light-gray: #e2e8f0;
+      --success: #48bb78;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--dark);
+      background-color: var(--light);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 3rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid rgba(255,255,255,0.2);
+      background: var(--secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: white;
+      margin-bottom: 1.5rem;
+    }
+
+    .header-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-text h2 {
+      font-size: 1.35rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .hero-hook {
+      max-width: 880px;
+      margin: 0 auto 1.5rem;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .hero-hook strong {
+      color: white;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-item i {
+      margin-right: 10px;
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+
+    .contact-item a {
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .contact-item a:hover {
+      color: var(--accent);
+    }
+
+    nav {
+      background: white;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .nav-links li {
+      padding: 1rem 1.25rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: var(--accent);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--secondary);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+      font-size: 2.2rem;
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+      padding-bottom: 1rem;
+    }
+
+    .section-header h2::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+    }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-category,
+    .experience-card,
+    .certification-card,
+    .accomplishment-card,
+    .case-card,
+    .simulator-card,
+    .tool-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .skill-category {
+      padding: 1.5rem;
+    }
+
+    .skill-category h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.15rem;
+    }
+
+    .skill-list {
+      list-style: none;
+    }
+
+    .skill-list li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1.25rem;
+    }
+
+    .skill-list li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-size: 1.2rem;
+    }
+
+    .experience-container,
+    .accomplishments-container {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .experience-card {
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .experience-card:hover,
+    .certification-card:hover,
+    .accomplishment-card:hover,
+    .case-card:hover,
+    .tool-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .experience-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 1.5rem;
+    }
+
+    .experience-header h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .experience-header .date {
+      font-weight: 300;
+      opacity: 0.9;
+    }
+
+    .experience-content {
+      padding: 1.5rem;
+    }
+
+    .experience-content h4 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .experience-summary {
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+
+    .experience-content ul {
+      padding-left: 1.35rem;
+    }
+
+    .experience-content ul li {
+      margin-bottom: 0.7rem;
+    }
+
+    .certifications-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .certification-card {
+      padding: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .certification-card h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    .certification-card .issuer {
+      color: var(--gray);
+      margin-bottom: 0.25rem;
+    }
+
+    .accomplishment-card {
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .accomplishment-card::before,
+    .case-card::before,
+    .simulator-card::before,
+    .tool-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: var(--accent);
+    }
+
+    .accomplishment-card h3,
+    .case-card h3,
+    .simulator-card h3,
+    .tool-card h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .case-grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .case-card,
+    .simulator-card,
+    .tool-card {
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-card h4,
+    .simulator-card h4,
+    .tool-card h4 {
+      color: var(--secondary);
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    .case-card p,
+    .simulator-card p,
+    .tool-card p {
+      margin-bottom: 0.85rem;
+    }
+
+    .case-card ul,
+    .tool-card ul {
+      padding-left: 1.25rem;
+    }
+
+    .case-card ul li,
+    .tool-card ul li {
+      margin-bottom: 0.55rem;
+    }
+
+    .scenario-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .scenario-btn {
+      border: 1px solid var(--light-gray);
+      background: white;
+      color: var(--primary);
+      border-radius: 999px;
+      padding: 0.7rem 1rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .scenario-btn:hover,
+    .scenario-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .scenario-panel {
+      display: none;
+      border-top: 1px solid var(--light-gray);
+      padding-top: 1.5rem;
+    }
+
+    .scenario-panel.active {
+      display: block;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin: 1.25rem 0 1.5rem;
+    }
+
+    .metric-box {
+      background: #f8fafc;
+      border: 1px solid var(--light-gray);
+      border-radius: 10px;
+      padding: 1rem;
+    }
+
+    .metric-box .label {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin-bottom: 0.25rem;
+    }
+
+    .metric-box .value {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .slider-wrap {
+      margin: 1.5rem 0;
+    }
+
+    .slider-wrap input {
+      width: 100%;
+      accent-color: var(--accent);
+    }
+
+    .sim-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .sim-box {
+      border: 1px solid var(--light-gray);
+      border-radius: 10px;
+      padding: 1rem;
+      background: #f8fafc;
+    }
+
+    .sim-box .value {
+      font-size: 1.8rem;
+      font-family: 'Poppins', sans-serif;
+      color: var(--primary);
+      font-weight: 600;
+      margin-top: 0.25rem;
+    }
+
+    .heatbar {
+      height: 12px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #48bb78 0%, #ecc94b 50%, #f56565 100%);
+      margin-top: 0.75rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .heatbar-indicator {
+      position: absolute;
+      top: -3px;
+      width: 18px;
+      height: 18px;
+      background: white;
+      border: 2px solid var(--primary);
+      border-radius: 50%;
+      transform: translateX(-50%);
+      transition: var(--transition);
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      text-align: center;
+      padding: 4rem 0;
+    }
+
+    .cta-content {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .cta-content h2 {
+      font-size: 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .cta-content p {
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+      opacity: 0.95;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: var(--primary);
+      border: none;
+      padding: 1rem 2.25rem;
+      border-radius: 50px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      background: var(--light);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      margin-left: 1rem;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      color: white;
+      font-size: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      background: var(--accent);
+      transform: translateY(-5px);
+    }
+
+    .copyright {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 992px) {
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-text h1 {
+        font-size: 2rem;
+      }
+
+      .header-text h2 {
+        font-size: 1.15rem;
+      }
+
+      .nav-links li {
+        padding: 0.8rem 0.9rem;
+      }
+
+      .section-header h2 {
+        font-size: 1.8rem;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      .btn-outline {
+        margin-left: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="profile-img">
-                    <i class="fas fa-user-shield"></i>
-                </div>
-                <div class="header-text">
-                    <h1>Hayder Zaidi</h1>
-                    <h2>Trust & Safety Operations & Program Manager</h2>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:512-586-0693">512-586-0693</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:hayderzaidi52@gmail.com">hayderzaidi52@gmail.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <a href="https://www.linkedin.com/in/hayder-zaidi/" target="_blank">LinkedIn</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Austin, TX</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="profile-img">
+          <i class="fas fa-user-shield"></i>
         </div>
-    </header>
-
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="nav-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#accomplishments">Accomplishments</a></li>
-                    <li><a href="#contact">Connect</a></li>
-                </ul>
+        <div class="header-text">
+          <h1>Hayder Zaidi</h1>
+          <h2>AI Risk, Trust &amp; Safety, and Moderation Quality</h2>
+          <p class="hero-hook">
+            I work on <strong>how moderation systems actually fail in production</strong> — where policy ambiguity, model behavior, QA design, and operational pressure create inconsistent decisions across high-volume environments.
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:512-586-0693">512-586-0693</a>
             </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:hayderzaidi52@gmail.com">hayderzaidi52@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-linkedin"></i>
+              <a href="https://www.linkedin.com/in/hayder-zaidi/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Austin, TX</span>
+            </div>
+          </div>
         </div>
-    </nav>
+      </div>
+    </div>
+  </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>Professional Profile</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Global Trust & Safety professional with extensive experience across leading tech platforms including TikTok and Meta (via Accenture). Proven track record in implementing strategic quality frameworks that drive significant improvements in content safety and operational efficiency.</p>
-                    <p>Specialized in developing innovative programs that enhance team performance while maintaining exceptional quality standards. Recognized for creating scalable solutions that align AI governance with platform integrity and regulatory compliance.</p>
-                    <p>Passionate about building high-performing teams through leadership initiatives that foster professional growth, open communication, and continuous improvement.</p>
-                    <p><strong>Languages:</strong> English, Arabic</p>
-                </div>
-                <div class="skills-container">
-                    <div class="skill-category">
-                        <h3>Trust & Safety</h3>
-                        <ul class="skill-list">
-                            <li>Policy Governance</li>
-                            <li>Content Moderation</li>
-                            <li>Risk Assessment</li>
-                            <li>Escalation Management</li>
-                            <li>AI/ML Workflow Collaboration</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Quality Assurance</h3>
-                        <ul class="skill-list">
-                            <li>QA Program Development</li>
-                            <li>LLM QA Test Design</li>
-                            <li>SLA Monitoring</li>
-                            <li>Accuracy Audits</li>
-                            <li>Knowledge Base Administration</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Leadership</h3>
-                        <ul class="skill-list">
-                            <li>Team Management</li>
-                            <li>Mentorship</li>
-                            <li>Strategic Communication</li>
-                            <li>Cross-Functional Collaboration</li>
-                            <li>Executive Reporting</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Technical</h3>
-                        <ul class="skill-list">
-                            <li>Cybersecurity Fundamentals</li>
-                            <li>IT Service Management</li>
-                            <li>Cloud Computing</li>
-                            <li>Data Analytics</li>
-                            <li>Scrum Methodology</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <nav>
+    <div class="container">
+      <div class="nav-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#case-studies">Case Study</a></li>
+          <li><a href="#certifications">Credentials</a></li>
+          <li><a href="#accomplishments">Highlights</a></li>
+          <li><a href="#contact">Connect</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>Professional Profile</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Trust &amp; Safety professional with experience across TikTok, Meta (via Accenture), and risk intelligence environments, with work spanning high-risk moderation, QA systems, model-policy alignment, and cross-functional escalation design.</p>
+          <p>My strongest value is not just operations leadership. It is identifying where systems break: where reviewers diverge, where model confidence becomes unreliable, where policy ambiguity drives rework, and where risk signals get lost in noise.</p>
+          <p>I focus on turning those failure patterns into clearer workflows, better decision quality, and stronger alignment between policy, QA, and platform risk objectives.</p>
+          <p><strong>Languages:</strong> English, Arabic</p>
         </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" style="background-color: #f8fafc;">
-        <div class="container">
-            <div class="section-header">
-                <h2>Professional Experience</h2>
-            </div>
-            <div class="experience-container">
-                <!-- TikTok -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3>TikTok – Austin, TX</h3>
-                        <span class="date">January 2024 – Present</span>
-                    </div>
-                    <div class="experience-content">
-                        <h4>Quality Assurance Specialist (E-Commerce & LLM Programs)</h4>
-                        <ul>
-                            <li>Redesigned TikTok Shop's QA workflow, improving checkpoint clarity and escalation paths, resulting in 9% faster queue turnaround and fewer late-stage policy reversals</li>
-                            <li>Partnered with AI engineers to design and implement an LLM QA test framework that improved model-policy alignment accuracy by 12% after first iteration</li>
-                            <li>Delivered policy training and documentation to 200+ TikTok Shop sellers, contributing to 25% drop in violation rates within one quarter</li>
-                            <li>Managed and mentored four junior QA analysts, driving their advancement into lead roles through structured coaching and development plans</li>
-                            <li>Coordinated policy alignment initiatives with Governance and Product Engineering teams, enhancing LLM model precision and content safety</li>
-                            <li>Conducted just-in-time training during policy changes, maintaining 99% QA pass rate and avoiding vendor penalties</li>
-                            <li>Facilitated cross-functional collaboration between QA, Account Management, and AI teams to improve seller verification compliance under EU Digital Services Act</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Accenture - Manager -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3>Accenture – Austin, TX</h3>
-                        <span class="date">December 2022 – November 2023</span>
-                    </div>
-                    <div class="experience-content">
-                        <h4>Trust & Safety Team Manager (Meta Project)</h4>
-                        <ul>
-                            <li>Led team of 15-20 reviewers for high-risk moderation queues (child safety, extremism, terrorism), resolving 8K tickets daily while maintaining SLA compliance</li>
-                            <li>Authored decision trees for ambiguous policy cases, reducing manager escalations by 18% and increasing first-pass accuracy to 99%</li>
-                            <li>Initiated Arabic-language knowledge hub and scaled anti-terrorism project team from 6 to 40 content reviewers, securing contract renewal from Meta</li>
-                            <li>Developed training, peer-audit loops, and knowledge base workflows that cut queue error rates by 40% and reduced handle time by 20%</li>
-                            <li>Cleared over 20K sensitive reports with only 2% escalated, preserving SLA bandwidth and platform trust</li>
-                            <li>Created developmental program with honorary SME/trainer rotations based on performance metrics, fostering engagement and cross-functional strength</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Accenture - Senior SME -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3>Accenture – Austin, TX</h3>
-                        <span class="date">August 2021 – December 2022</span>
-                    </div>
-                    <div class="experience-content">
-                        <h4>Senior Subject Matter Expert (Meta Project)</h4>
-                        <ul>
-                            <li>Managed team of 7 SMEs supporting complex content moderation and technical issue resolution across Meta platforms</li>
-                            <li>Created and launched modular knowledge bases for 100+ moderators, reducing average ticket handle time by 20% while maintaining 99% QA scores</li>
-                            <li>Trained moderators on risk-based enforcement practices and gray-area resolution strategies to minimize escalation dependency</li>
-                            <li>Introduced regression coaching methods that revived underperforming agents' metrics through phased improvement plans</li>
-                            <li>Advised leadership on ticket categorization challenges and content sensitivity triggers, enhancing escalation protocols</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Additional positions would follow the same pattern -->
-                
-                <!-- Marriott -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3>Marriott – Austin, TX</h3>
-                        <span class="date">February 2014 – August 2019</span>
-                    </div>
-                    <div class="experience-content">
-                        <h4>Technical Support & Loss Prevention</h4>
-                        <ul>
-                            <li>Delivered technical support for 15+ internal users, minimizing workflow disruptions through rapid issue resolution</li>
-                            <li>Spearheaded installation and maintenance of hardware/software systems, reducing downtime across departments</li>
-                            <li>Supported internal security procedures and loss prevention operations across guest service points</li>
-                            <li>Introduced reporting system that tracked device performance and flagged recurring system faults</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3>AI / Moderation</h3>
+            <ul class="skill-list">
+              <li>LLM QA Test Design</li>
+              <li>Model-Policy Alignment</li>
+              <li>Content Moderation Systems</li>
+              <li>Escalation Design</li>
+              <li>Decision Quality Analysis</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Trust &amp; Safety</h3>
+            <ul class="skill-list">
+              <li>Policy Governance</li>
+              <li>High-Risk Queue Management</li>
+              <li>Risk Assessment</li>
+              <li>Enforcement Consistency</li>
+              <li>Operational Readiness</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Leadership</h3>
+            <ul class="skill-list">
+              <li>Team Management</li>
+              <li>Mentorship</li>
+              <li>Knowledge Base Design</li>
+              <li>Cross-Functional Collaboration</li>
+              <li>Executive Reporting</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Technical / Analytics</h3>
+            <ul class="skill-list">
+              <li>SQL</li>
+              <li>Google Data Analytics</li>
+              <li>Cybersecurity Fundamentals</li>
+              <li>OSINT Monitoring</li>
+              <li>Dashboard / Metrics Review</li>
+            </ul>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications">
-        <div class="container">
-            <div class="section-header">
-                <h2>Certifications & Education</h2>
-            </div>
-            <div class="certifications-container">
-                <div class="certification-card">
-                    <h3>Associate of Applied Science (AAS) in Cybersecurity</h3>
-                    <p class="issuer">Austin Community College, 2022</p>
-                </div>
-                <div class="certification-card">
-                    <h3>Certified ScrumMaster (CSM)</h3>
-                    <p class="issuer">Scrum Alliance</p>
-                </div>
-                <div class="certification-card">
-                    <h3>ITIL® 4 Foundation Certificate</h3>
-                    <p class="issuer">PeopleCert</p>
-                </div>
-                <div class="certification-card">
-                    <h3>Lean Six Sigma Yellow Belt</h3>
-                    <p class="issuer">Council for Six Sigma Certification</p>
-                </div>
-                <div class="certification-card">
-                    <h3>Lean Six Sigma White Belt</h3>
-                    <p class="issuer">Council for Six Sigma Certification</p>
-                </div>
-                <div class="certification-card">
-                    <h3>Google IT Support Professional Certificate</h3>
-                    <p class="issuer">Google/Coursera</p>
-                </div>
-                <div class="certification-card">
-                    <h3>AWS Certified Cloud Practitioner</h3>
-                    <p class="issuer">Amazon Web Services</p>
-                </div>
-                <div class="certification-card">
-                    <h3>Google Data Analytics Professional Certificate</h3>
-                    <p class="issuer">Google/Coursera</p>
-                </div>
-                <div class="certification-card">
-                    <h3>Customer Success Manager Level 1 (CCSM)</h3>
-                    <p class="issuer">SuccessCOACHING</p>
-                </div>
-            </div>
+  <section id="experience" style="background-color:#f8fafc;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Professional Experience</h2>
+      </div>
+      <div class="experience-container">
+        <div class="experience-card">
+          <div class="experience-header">
+            <h3>TikTok – Austin, TX</h3>
+            <span class="date">January 2024 – Present</span>
+          </div>
+          <div class="experience-content">
+            <h4>Quality Assurance Specialist (E-Commerce &amp; LLM Programs)</h4>
+            <p class="experience-summary">Worked inside QA and moderation systems where model output quality, human review, and policy interpretation had to align in real time. The role centered on identifying breakdown points that were invisible in top-line metrics but obvious in queue behavior and reversals.</p>
+            <ul>
+              <li>Redesigned TikTok Shop’s QA workflow, improving checkpoint clarity and escalation paths for 9% faster queue turnaround and fewer late-stage policy reversals</li>
+              <li>Partnered with AI engineers to support LLM QA testing frameworks that improved model-policy alignment accuracy by 12%</li>
+              <li>Delivered training and documentation to 200+ sellers, contributing to a 25% reduction in violation rates within one quarter</li>
+              <li>Maintained 99% QA pass rate during policy changes through just-in-time training and quality calibration</li>
+              <li>Observed recurring disagreement patterns in borderline content and model edge cases, especially where policy intent required interpretation</li>
+              <li>Worked with Governance and Product Engineering teams on seller verification and EU Digital Services Act compliance alignment</li>
+            </ul>
+          </div>
         </div>
-    </section>
 
-    <!-- Accomplishments Section -->
-    <section id="accomplishments" style="background-color: #f8fafc;">
-        <div class="container">
-            <div class="section-header">
-                <h2>Key Accomplishments</h2>
-            </div>
-            <div class="accomplishments-container">
-                <div class="accomplishment-card">
-                    <h3>Professional Growth Program Implementation</h3>
-                    <p>Designed and implemented a unique development program at Accenture that provided high-performing employees with daily opportunities to serve as SMEs or trainers. This initiative:</p>
-                    <ul>
-                        <li>Boosted team morale by 35% according to internal surveys</li>
-                        <li>Reduced attrition by 22% among participating employees</li>
-                        <li>Created a competitive environment that improved attendance by 18%</li>
-                        <li>Resulted in 40% of participants being promoted within 6 months</li>
-                    </ul>
-                </div>
-                
-                <div class="accomplishment-card">
-                    <h3>Counterterrorism Knowledge Base Development</h3>
-                    <p>Spearheaded the creation of a comprehensive knowledge base for Accenture's counterterrorism content moderation program that included:</p>
-                    <ul>
-                        <li>Modular training programs tailored to different experience levels</li>
-                        <li>Real-time coaching frameworks for complex cases</li>
-                        <li>Decision trees for ambiguous content scenarios</li>
-                        <li>Arabic-language resources for regional specialists</li>
-                    </ul>
-                    <p>This initiative was directly credited with securing contract renewal from Meta and expanding the team from 6 to 50 employees.</p>
-                </div>
-                
-                <div class="accomplishment-card">
-                    <h3>PPO Management & Performance Tracking System</h3>
-                    <p>Developed an innovative performance tracking and improvement system as TikTok's LLM QA Analyst that featured:</p>
-                    <ul>
-                        <li>Development action plans with measurable milestones</li>
-                        <li>Collaboration protocols with engineering and governance teams</li>
-                        <li>Appeals program with quality metrics tracking</li>
-                        <li>Dual WBR system (for PPOs and engineering teams)</li>
-                    </ul>
-                    <p>This system reduced recurring errors by 28% and improved model-policy alignment by 12%.</p>
-                </div>
-                
-                <div class="accomplishment-card">
-                    <h3>Team Leadership Initiatives</h3>
-                    <p>Created two impactful leadership programs as Trust & Safety Team Manager:</p>
-                    <p><strong>1. Professional Growth Program:</strong> Structured development pathways for high-potential employees with rotation opportunities.</p>
-                    <p><strong>2. Monthly Brainstorm Sessions:</strong> Regular innovation meetings where team members could:</p>
-                    <ul>
-                        <li>Provide feedback on work processes</li>
-                        <li>Suggest improvements to leadership approaches</li>
-                        <li>Propose innovative solutions to operational challenges</li>
-                    </ul>
-                    <p>Implemented suggestions were rewarded, creating a culture of open communication that improved team performance metrics by 15%.</p>
-                </div>
-            </div>
+        <div class="experience-card">
+          <div class="experience-header">
+            <h3>Accenture – Austin, TX</h3>
+            <span class="date">December 2022 – November 2023</span>
+          </div>
+          <div class="experience-content">
+            <h4>Trust &amp; Safety Team Manager (Meta Project)</h4>
+            <p class="experience-summary">Led high-risk moderation operations where the challenge was not simply throughput, but keeping speed, quality, and policy consistency aligned under pressure.</p>
+            <ul>
+              <li>Led a team of 15–20 reviewers across child safety, extremism, and terrorism queues, resolving 8K tickets daily while maintaining SLA compliance</li>
+              <li>Built decision trees for ambiguous policy cases, reducing manager escalations by 18% and increasing first-pass accuracy to 99%</li>
+              <li>Scaled an Arabic-language anti-terrorism project from 6 to 40 reviewers, contributing to contract renewal from Meta</li>
+              <li>Developed training, peer-audit loops, and knowledge workflows that reduced queue error rates by 40% and cut handle time by 20%</li>
+              <li>Cleared over 20K sensitive reports with only 2% escalated, preserving platform trust and operational bandwidth</li>
+              <li>Observed that most quality failures were concentrated in recurring gray-area scenarios rather than being randomly distributed</li>
+            </ul>
+          </div>
         </div>
-    </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Let's Connect</h2>
-                <p>I'm always interested in discussing Trust & Safety opportunities, sharing insights about content moderation best practices, or connecting with fellow professionals in the field.</p>
-                <div>
-                    <a href="mailto:hayderzaidi52@gmail.com" class="btn">Email Me</a>
-                    <a href="https://www.linkedin.com/in/hayder-zaidi/" target="_blank" class="btn btn-outline">LinkedIn</a>
-                </div>
-            </div>
+        <div class="experience-card">
+          <div class="experience-header">
+            <h3>Accenture – Austin, TX</h3>
+            <span class="date">August 2021 – December 2022</span>
+          </div>
+          <div class="experience-content">
+            <h4>Senior Subject Matter Expert (Meta Project)</h4>
+            <p class="experience-summary">Acted as the bridge between frontline moderators, QA, and leadership, especially in complex policy scenarios that needed structure rather than escalation volume.</p>
+            <ul>
+              <li>Managed a team of 7 SMEs supporting complex moderation and technical issue resolution</li>
+              <li>Created modular knowledge bases for 100+ moderators, reducing average handle time by 20% while maintaining 99% QA scores</li>
+              <li>Trained moderators on risk-based enforcement and gray-area resolution strategies to reduce escalation dependency</li>
+              <li>Introduced regression coaching methods that revived underperforming agents’ metrics through phased improvement plans</li>
+              <li>Advised leadership on ticket categorization challenges and sensitivity triggers that were repeatedly causing inconsistency</li>
+            </ul>
+          </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <h3>Hayder Zaidi</h3>
-                <p>Trust & Safety Operations & Program Manager</p>
-                <div class="social-links">
-                    <a href="mailto:hayderzaidi52@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="tel:512-586-0693"><i class="fas fa-phone"></i></a>
-                    <a href="https://www.linkedin.com/in/hayder-zaidi/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <p class="copyright">© 2023 Hayder Zaidi. All rights reserved.</p>
-            </div>
+        <div class="experience-card">
+          <div class="experience-header">
+            <h3>Vaco by Highspring – Austin, TX</h3>
+            <span class="date">2024 – 2026</span>
+          </div>
+          <div class="experience-content">
+            <h4>Intel Detection Analyst</h4>
+            <p class="experience-summary">Worked in high-noise monitoring environments where the core challenge was not seeing more information, but identifying which signals actually mattered and when they required escalation.</p>
+            <ul>
+              <li>Monitored global sources to identify misinformation trends, user risks, crisis events, and geopolitical threats</li>
+              <li>Applied OSINT techniques to detect election integrity risks, disinformation patterns, and early misuse signals</li>
+              <li>Delivered timely situational awareness to support operational readiness and stakeholder action</li>
+              <li>Observed that signal prioritization, not raw data volume, was the main determinant of response quality</li>
+            </ul>
+          </div>
         </div>
-    </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+        <div class="experience-card">
+          <div class="experience-header">
+            <h3>Marriott – Austin, TX</h3>
+            <span class="date">February 2014 – August 2019</span>
+          </div>
+          <div class="experience-content">
+            <h4>Technical Support &amp; Loss Prevention</h4>
+            <ul>
+              <li>Delivered technical support for 15+ internal users, reducing operational disruption through rapid issue resolution</li>
+              <li>Supported internal security procedures and loss prevention operations across guest service points</li>
+              <li>Introduced a reporting system that tracked device performance and flagged recurring faults</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Simple animation for accomplishment cards
-        const accomplishmentCards = document.querySelectorAll('.accomplishment-card');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        accomplishmentCards.forEach(card => {
-            card.style.opacity = 0;
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-    </script>
+  <section id="case-studies">
+    <div class="container">
+      <div class="section-header">
+        <h2>Flagship Case Study</h2>
+      </div>
+
+      <div class="case-grid">
+        <div class="case-card">
+          <h3>How Moderation Systems Fail in Production</h3>
+          <p>This section is built from recurring patterns I observed across QA, moderation, and risk-intelligence environments. It is not meant to present theory. It highlights the types of system failures that create rework, inconsistency, and platform risk even when top-line metrics look healthy.</p>
+
+          <div class="scenario-tabs">
+            <button class="scenario-btn active" data-scenario="harassment">Borderline Harassment</button>
+            <button class="scenario-btn" data-scenario="misinfo">Misinformation Timing</button>
+            <button class="scenario-btn" data-scenario="fraud">Fraud Signal Clustering</button>
+          </div>
+
+          <div id="harassment" class="scenario-panel active">
+            <h4>Observed Scenario</h4>
+            <p>Content that sits between sarcasm, insult, and contextual language often produced disagreement between reviewers and model outputs. These were not clear-cut violations, but they repeatedly created rework and escalations.</p>
+            <div class="metrics-grid">
+              <div class="metric-box">
+                <span class="label">Typical disagreement range</span>
+                <span class="value">20–30%</span>
+              </div>
+              <div class="metric-box">
+                <span class="label">Primary failure type</span>
+                <span class="value">Ambiguity</span>
+              </div>
+              <div class="metric-box">
+                <span class="label">Downstream effect</span>
+                <span class="value">Rework</span>
+              </div>
+            </div>
+            <h4>Why It Breaks</h4>
+            <p>These cases require interpretation rather than simple rule matching. When policy intent depends on tone, context, or implied meaning, both reviewers and models become less consistent.</p>
+            <h4>Operational Impact</h4>
+            <ul>
+              <li>Higher QA correction volume</li>
+              <li>More late-stage reversals</li>
+              <li>Slower queue movement in escalated content types</li>
+              <li>Lower trust in automated enforcement when confidence appears inconsistent</li>
+            </ul>
+            <h4>What This Shows</h4>
+            <p>Overall accuracy is not enough. Systems need category-level evaluation and error segmentation to identify the scenarios that actually drive moderation risk.</p>
+          </div>
+
+          <div id="misinfo" class="scenario-panel">
+            <h4>Observed Scenario</h4>
+            <p>Early-stage misinformation rarely arrives as a clear violation. It often appears fragmented, low-confidence, and individually weak, which means systems delay action until patterns are already spreading.</p>
+            <div class="metrics-grid">
+              <div class="metric-box">
+                <span class="label">Primary detection issue</span>
+                <span class="value">Timing</span>
+              </div>
+              <div class="metric-box">
+                <span class="label">Signal quality</span>
+                <span class="value">Weak early</span>
+              </div>
+              <div class="metric-box">
+                <span class="label">Failure mode</span>
+                <span class="value">Delay</span>
+              </div>
+            </div>
+            <h4>Why It Breaks</h4>
+            <p>Moderation systems often wait for certainty. But in integrity environments, waiting for certainty can mean waiting until the harm is already distributed across multiple surfaces.</p>
+            <h4>Operational Impact</h4>
+            <ul>
+              <li>Late intervention in developing narratives</li>
+              <li>More volume to review once spread accelerates</li>
+              <li>Greater coordination burden across response teams</li>
+            </ul>
+            <h4>What This Shows</h4>
+            <p>The failure is not always detection itself. Often it is the inability to treat early weak indicators as meaningful enough to warrant closer monitoring.</p>
+          </div>
+
+          <div id="fraud" class="scenario-panel">
+            <h4>Observed Scenario</h4>
+            <p>Individual risk signals may look low-confidence on their own, but when grouped across accounts or behaviors they form recognizable fraud patterns. Systems that review signals independently miss this relationship.</p>
+            <div class="metrics-grid">
+              <div class="metric-box">
+                <span class="label">Primary failure type</span>
+                <span class="value">Aggregation</span>
+              </div>
+              <div class="metric-box">
+                <span class="label">Signal visibility</span>
+                <span class="value">Present</span>
+              </div>
+              <div class="metric-box">
+                <span class="label">Decision gap</span>
+                <span class="value">Context</span>
+              </div>
+            </div>
+            <h4>Why It Breaks</h4>
+            <p>Signals are visible, but they are evaluated too narrowly. Without contextual grouping, suspicious behavior remains below threshold until the pattern becomes obvious too late.</p>
+            <h4>Operational Impact</h4>
+            <ul>
+              <li>Longer fraud persistence windows</li>
+              <li>Delayed escalation for connected accounts</li>
+              <li>Higher investigative workload later in the cycle</li>
+            </ul>
+            <h4>What This Shows</h4>
+            <p>The issue is not always lack of data. Often it is lack of pattern aggregation and prioritization logic.</p>
+          </div>
+        </div>
+
+        <div class="simulator-card">
+          <h3>Interactive Tool: Enforcement Tradeoff Simulator</h3>
+          <p>Moderation systems are always balancing two opposing risks: acting too strictly and acting too loosely. Adjust the slider to see how tightening or loosening enforcement changes the tradeoff between false positives and false negatives.</p>
+
+          <div class="slider-wrap">
+            <label for="strictness"><strong>Enforcement Strictness</strong></label>
+            <input type="range" min="0" max="100" value="50" id="strictness" />
+          </div>
+
+          <div class="sim-grid">
+            <div class="sim-box">
+              <div>False Positives</div>
+              <div class="value" id="fpValue">50%</div>
+              <div class="heatbar"><div class="heatbar-indicator" id="fpIndicator" style="left:50%"></div></div>
+              <p>Incorrect enforcement against non-violating content rises as rules get stricter.</p>
+            </div>
+            <div class="sim-box">
+              <div>False Negatives</div>
+              <div class="value" id="fnValue">50%</div>
+              <div class="heatbar"><div class="heatbar-indicator" id="fnIndicator" style="left:50%"></div></div>
+              <p>Missed harmful content rises as rules get looser.</p>
+            </div>
+            <div class="sim-box">
+              <div>Reviewer Friction</div>
+              <div class="value" id="rfValue">50%</div>
+              <p>Friction increases when ambiguous content is pushed through stricter enforcement thresholds.</p>
+            </div>
+            <div class="sim-box">
+              <div>Platform Exposure</div>
+              <div class="value" id="peValue">50%</div>
+              <p>Exposure increases when looser enforcement allows more harmful content to remain active.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <h3>Why This Adds Value</h3>
+          <p>This portfolio section is built to show more than a list of achievements. It shows how I think about the problems moderation teams actually face in production:</p>
+          <ul>
+            <li>Why strong accuracy numbers can still hide failure concentration</li>
+            <li>Why ambiguity produces more inconsistency than obvious violations</li>
+            <li>Why escalation design matters as much as policy language</li>
+            <li>Why signal quality matters more than signal volume in risk environments</li>
+          </ul>
+          <p>That is the perspective I bring to QA, moderation, AI risk, and trust &amp; safety work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <h2>Certifications &amp; Education</h2>
+      </div>
+      <div class="certifications-container">
+        <div class="certification-card">
+          <h3>Associate of Applied Science (AAS) in Cybersecurity</h3>
+          <p class="issuer">Austin Community College</p>
+        </div>
+        <div class="certification-card">
+          <h3>Certified ScrumMaster (CSM)</h3>
+          <p class="issuer">Scrum Alliance</p>
+        </div>
+        <div class="certification-card">
+          <h3>ITIL® 4 Foundation Certificate</h3>
+          <p class="issuer">PeopleCert</p>
+        </div>
+        <div class="certification-card">
+          <h3>Lean Six Sigma Yellow Belt</h3>
+          <p class="issuer">Council for Six Sigma Certification</p>
+        </div>
+        <div class="certification-card">
+          <h3>Lean Six Sigma White Belt</h3>
+          <p class="issuer">Council for Six Sigma Certification</p>
+        </div>
+        <div class="certification-card">
+          <h3>Google IT Support Professional Certificate</h3>
+          <p class="issuer">Google / Coursera</p>
+        </div>
+        <div class="certification-card">
+          <h3>AWS Certified Cloud Practitioner</h3>
+          <p class="issuer">Amazon Web Services</p>
+        </div>
+        <div class="certification-card">
+          <h3>Google Data Analytics Professional Certificate</h3>
+          <p class="issuer">Google / Coursera</p>
+        </div>
+        <div class="certification-card">
+          <h3>Customer Success Manager Level 1 (CCSM)</h3>
+          <p class="issuer">SuccessCOACHING</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="accomplishments" style="background-color:#f8fafc;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Selected Highlights</h2>
+      </div>
+      <div class="accomplishments-container">
+        <div class="accomplishment-card">
+          <h3>LLM QA &amp; Workflow Improvement</h3>
+          <p>At TikTok, redesigned QA checkpoints and escalation paths to improve queue movement, reduce reversals, and strengthen model-policy alignment under real operational pressure.</p>
+        </div>
+        <div class="accomplishment-card">
+          <h3>High-Risk Operations at Scale</h3>
+          <p>At Meta operations through Accenture, designed decision structures and coaching loops that helped maintain 99% first-pass accuracy while handling high-risk queues and large volumes of sensitive reports.</p>
+        </div>
+        <div class="accomplishment-card">
+          <h3>Knowledge Systems &amp; Enablement</h3>
+          <p>Built knowledge bases, decision trees, coaching methods, and escalation guidance that reduced handle time, improved consistency, and lowered dependence on managerial escalation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Let’s Connect</h2>
+        <p>I’m most interested in roles involving AI moderation, trust &amp; safety, risk operations, or decision quality in environments where platform integrity, policy consistency, and operational execution all matter.</p>
+        <div>
+          <a href="mailto:hayderzaidi52@gmail.com" class="btn">Email Me</a>
+          <a href="https://www.linkedin.com/in/hayder-zaidi/" target="_blank" class="btn btn-outline">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <h3>Hayder Zaidi</h3>
+        <p>AI Risk, Trust &amp; Safety, and Moderation Quality</p>
+        <div class="social-links">
+          <a href="mailto:hayderzaidi52@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="tel:512-586-0693"><i class="fas fa-phone"></i></a>
+          <a href="https://www.linkedin.com/in/hayder-zaidi/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p class="copyright">© 2026 Hayder Zaidi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    const cards = document.querySelectorAll('.accomplishment-card, .case-card, .tool-card, .simulator-card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => {
+      card.style.opacity = 0;
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(card);
+    });
+
+    const scenarioButtons = document.querySelectorAll('.scenario-btn');
+    const scenarioPanels = document.querySelectorAll('.scenario-panel');
+
+    scenarioButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        scenarioButtons.forEach(btn => btn.classList.remove('active'));
+        scenarioPanels.forEach(panel => panel.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(button.dataset.scenario).classList.add('active');
+      });
+    });
+
+    const strictness = document.getElementById('strictness');
+    const fpValue = document.getElementById('fpValue');
+    const fnValue = document.getElementById('fnValue');
+    const rfValue = document.getElementById('rfValue');
+    const peValue = document.getElementById('peValue');
+    const fpIndicator = document.getElementById('fpIndicator');
+    const fnIndicator = document.getElementById('fnIndicator');
+
+    function updateSimulator(value) {
+      const strict = Number(value);
+      const fp = strict;
+      const fn = 100 - strict;
+      const reviewerFriction = Math.round((strict * 0.7) + 15);
+      const platformExposure = Math.round(((100 - strict) * 0.7) + 15);
+
+      fpValue.textContent = fp + '%';
+      fnValue.textContent = fn + '%';
+      rfValue.textContent = reviewerFriction + '%';
+      peValue.textContent = platformExposure + '%';
+      fpIndicator.style.left = fp + '%';
+      fnIndicator.style.left = fn + '%';
+    }
+
+    strictness.addEventListener('input', (e) => updateSimulator(e.target.value));
+    updateSimulator(strictness.value);
+  </script>
 </body>
 </html>
